@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/scalize.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/scalize.min.js"></script>
+</head>
+<body>
+<div class="container">
+      <div class="scalize">
+            <div id="content1" class="content right bottom">
+                <div class="head">
+                    <a href="https://github.com/ArcherHuang/Scalize" class="view" target="_blank">台南</a>                  
+                </div>
+                <div class="body">
+                    <p>台南市</p>
+                    <p>電話：+886-6-0000000</p>
+                    <p>傳真：+886-6-0000000</p>
+                </div>
+            </div>
+            <div id="content2" class="content right bottom">
+                <div class="head">
+                    <a href="https://github.com/ArcherHuang/Scalize" class="view" target="_blank">新竹</a>
+                </div>
+                <div class="body">
+                    <p>新竹市</p>
+                    <p>電話：+886-3-0000000</p>
+                    <p>傳真：+886-3-0000000</p>
+                </div>
+            </div>
+
+            <img src="image/taiwan.png" alt="" class="target">
+            <div class="item-point" data-top="380" data-left="150" data-popover="#content1">
+                    <div><a href="#" class="toggle"></a></div>
+                </div>
+            <div class="item-point" data-top="130" data-left="300" data-popover="#content2">
+                <div><a href="#" class="toggle"></a></div>
+            </div>
+      </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+            $('.scalize').scalize({
+                styleSelector: 'circle',
+                animationPopoverIn: 'fadeIn',
+                animationPopoverOut: 'fadeOut',
+                animationSelector: 'pulse2',
+                getSelectorElement: function(el) {
+                    console.log('getSelectorElement');
+                }
+            });         
+        }); 
+    
+</script>
+</body>
+</html>
